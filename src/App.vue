@@ -1,27 +1,29 @@
 <template lang="pug">
-div#app
-  img(alt="Vue logo" src="./assets/logo.png")
-  hello-world(msg="Welcome to Your Vue.js App")
+v-app
+  app-header
+  v-main
+    v-container
+      v-row.d-flex.flex-column.justify-center.align-center
+        img(alt="Vue logo" src="./assets/logo.png")
+        home-page(msg="Welcome to Your Vue.js App")
+  app-footer
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HomePage from './views/HomePage'
+import AppHeader from './components/AppHeader'
+import AppFooter from './components/AppFooter'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HomePage,
+    AppHeader,
+    AppFooter
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

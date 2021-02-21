@@ -1,7 +1,8 @@
 <template lang="pug">
-div
-  h1 Component Title
-  p {{msg}}
+  div
+    h1 Component Title
+    p {{msg}}
+    v-btn(elevation="10" color="primary" raised) Hello
 
 </template>
 
